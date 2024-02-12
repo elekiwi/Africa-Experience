@@ -39,8 +39,8 @@ struct AnimalListItemView: View {
 
 let animals: [Animal] = Bundle.main.decode("animals.json")
 
+
 #Preview {
-   
-    AnimalListItemView(animal: animals[1 ])
+    AnimalListItemView(animal: animals[1])
         .padding()
 }

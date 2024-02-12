@@ -16,4 +16,9 @@ struct Animal: Codable, Identifiable {
     let image: String
     let gallery: [String]
     let fact: [String]
+    
+    static let animals: [Animal] = Bundle.main.decode("animals.json")
+
 }
+
+
