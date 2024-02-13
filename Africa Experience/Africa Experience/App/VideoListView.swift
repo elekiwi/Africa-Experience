@@ -17,7 +17,12 @@ struct VideoListView: View {
     var body: some View {
         NavigationStack {
             List(videos) { item in
-                VideoListItemView(video: item)
+                NavigationLink(destination: {
+                    VideoPlayerView(videoSelected: item.id, videoTitle: item.name
+                    )
+                }, label: {
+                    VideoListItemView(video: item)
+                })
              }//LIST
             .navigationTitle("Videos")
             .toolbarTitleDisplayMode(.inline)
